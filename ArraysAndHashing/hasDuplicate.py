@@ -1,15 +1,13 @@
-#Time complexity O(n), no nested for loops, Space complexity O(n), storing all elements in a hash table
+#Time complexity O(n), no nested for loops, Space complexity O(n), storing all elements in a set
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         
-        hash = {} #initialize hash table
+        hashtable = set() #initialize set
 
-        for i in range (len(nums)):
-            hash[nums[i]] = 1 + hash.get(nums[i], 0) #iterate through the list noting every occurence of each number
-
-        for j in range (len(nums)): #check if each number occured more then once
-            if hash[nums[j]] > 1:
-                return True
+        for n in nums: #iterate through the list
+            if n in hashtable:
+                return True #return true if a number has previously been stored in the set
+            hashtable.add(n) #otherwise add the number to the set
         
         return False
 
