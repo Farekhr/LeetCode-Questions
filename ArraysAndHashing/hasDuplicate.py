@@ -4,10 +4,10 @@ class Solution:
         
         hashtable = set() #initialize set
 
-        for n in nums: #iterate through the list
-            if n in hashtable:
+        for i in nums: #iterate through the list
+            if i in hashtable:
                 return True #return true if a number has previously been stored in the set
-            hashtable.add(n) #otherwise add the number to the set
+            hashtable.add(i) #otherwise add the number to the set
         
         return False
 
