@@ -12,7 +12,7 @@ class Solution:
 
         for j in t:
 
-            if j not in letters: #check is second string has any letters that first string didn't have
+            if j not in letters: #check if second string has any letters that first string didn't have
                 return False
             
             if letters[j] < 1: #check if any letter appears more times in second string then it does in the first
