@@ -1,3 +1,4 @@
+#Time complexity of O(n) thanks to the use of a dictionary and a single for loop, Space complexity of O(n) because dictionary costs memory to store
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
